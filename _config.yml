@@ -21,8 +21,8 @@ instagram: eashion
 linkedin: eashion
 
 # avatar and Favicon
-avatar: eashion-avatar.jpg
-favicon: eashion-favicon.ico
+avatar: _includes/eashion-avatar.jpg
+favicon: _includes/eashion-favicon.ico
 
 # disqus config
 disqus:
