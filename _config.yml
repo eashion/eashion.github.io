@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   eashion's blog
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://eashion.github.io # the base hostname & protocol for your site
-rss_url: /pages/feed.xml
+# rss_url: /pages/feed.xml
 author: eashion
 
 # Sidebar filter
