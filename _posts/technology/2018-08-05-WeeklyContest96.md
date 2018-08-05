@@ -11,12 +11,10 @@ keywords: leetcode, weekly contest
 **887. Projection Area of 3D Shapes**
 <p>给出一个2d的数组，表示某个坐标(i,j)的高度为多少，然后根据高度求出三视图的面积。题目比较直接，应该能直接想出解法。</p>
 
-```
+```c++
 class Solution {
 public:
     int projectionArea(vector<vector<int>>& grid) {
-        // grid = {{1,0},{0,2}};
-        // grid = {{2,2,2},{2,1,2},{2,2,2}};
         int res = 0;
         int M = grid.size();
         if (M == 0) {
@@ -52,7 +50,7 @@ public:
 **885. Boats to Save People**
 <p>有一列人，每个人有不同的体重。每条船可以最多装两个人，并且每条船的限重都是一样的。这道题的思路也比较简单，首先排序是必要的，根据有序，可以直接从两端开始处理。如果每条船在装一个右边肥佬的同时，尽可能捎带一个瘦子。如果不行，就留给下一条船。</p>
 
-```
+```c++
 class Solution {
 public:
     int numRescueBoats(vector<int>& people, int limit) {
@@ -85,7 +83,7 @@ public:
 <p>我在思考的是为什么会花时间implement了一个次优的算法，有没有地方可以从一开始看出暴力法是不可行的？</p>
 题目给出的变量取值范围：<br>
 
-```
+```c++
 1. 2 <= S.length <= 100
 2. S will only contain lowercase letters and digits 2 through 9.
 3. S starts with a letter.
@@ -95,9 +93,9 @@ public:
 <p>2^63, 最多有这个多个字符。如果完整存下来的话，这个数字是很恐怖的。并且也要注意到这个长度会超过int的取值范围。也就是说简单模拟从一开始就应该判断出是不可行的，这次比赛花时间在这个上面是不应该的。Think one more step.</P>
 <p>既然暴力模拟的方法不可取，那么怎么将前面循环字符串保存下来呢？</p>
 <p>首先注意到连续的数字，可以转化为他们的乘积。比如：ad23 = ad6. 那么初始的密文就可以转化为一个单字符串和一个循环次数了。（注意之后的字符串都是加在前面复制结果之后的）很自然的想到我们可以将这个分别存储下来。终止条件是什么呢？找到第K位，也就是复制之后的长度大于等于K。而这个总长度是很好记录的。</p>
-<p>那么现在的问题就是根据存储下来的piece和total length判断K的位置。可以感觉到这是一个递归的过程。比如前一个字符串长度为a,循环3次。下一个piece长度为b.假如K在3*a~3*a+b的位置，那么我们要找的第K位就在下一个piece中。假如K<3*a,那么令K%a,从前面找K落在第几个区间。算法的关键在于模拟这个backtracking的过程。</p>
+<p>那么现在的问题就是根据存储下来的piece和total length判断K的位置。可以感觉到这是一个递归的过程。比如前一个字符串长度为a,循环3次。下一个piece长度为b.假如K在3*a~3*a+b的位置，那么我们要找的第K位就在下一个piece中。假如K < 3*a,那么令K%a,从前面找K落在第几个区间。算法的关键在于模拟这个backtracking的过程。</p>
 
-```
+```c++
 class Solution {
 public:
     string decodeAtIndex(string S, int K) {
@@ -171,7 +169,7 @@ public:
 ```
 <p>这个backtracking还是不好想的，也可能是自己用的方法太复杂，导致用的时间比较多。看到一个递归的方法，实现起来简单很多，但是效率可能会差一些。</p>
 
-```
+```c++
 class Solution {
 public:
     string decodeAtIndex(string S, int K) {
@@ -201,7 +199,7 @@ public:
 
 <p>另外贴一个也是backtracking，但是在空间和时间上都比较好的解法。</p>
 
-```
+```c++
 class Solution {
 public:
     string decodeAtIndex(string S, int K) {
