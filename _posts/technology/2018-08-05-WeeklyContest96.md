@@ -1,4 +1,3 @@
-# Weekly Contest 96
 ---
 layout: post
 title: Weekly Contest 96
@@ -6,7 +5,6 @@ category: leetcode
 tags: leetcoe, weekly contest
 keywords: leetcode, weekly contest
 ---
-
 这次比赛在结束前只A掉了两道题，主要是在第三题花了比较多的时间。<br>
 **887. Projection Area of 3D Shapes**
 <p>给出一个2d的数组，表示某个坐标(i,j)的高度为多少，然后根据高度求出三视图的面积。题目比较直接，应该能直接想出解法。</p>
