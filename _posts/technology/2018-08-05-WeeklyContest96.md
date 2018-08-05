@@ -1,10 +1,13 @@
 # Weekly Contest 96
 ---
+
 layout: post
 title: Weekly Contest 96
 category: leetcode
 tags: leetcoe, weekly contest
+
 keywords: leetcode, weekly contest
+
 ---
 
 这次比赛在结束前只A掉了两道题，主要是在第三题花了比较多的时间。<br>
