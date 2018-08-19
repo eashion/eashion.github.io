@@ -2,7 +2,7 @@
 layout: post
 title: Weekly Contest 98
 category: leetcode
-tags: leetcoe, weekly contest
+tags: leetcode
 keywords: leetcode, weekly contest
 ---
 中间去休斯顿玩错过了一次，重新接上。这次比赛A了三道题目，前三道还算比较顺利，没遇到太大的问题，第四题不会做。<br>
