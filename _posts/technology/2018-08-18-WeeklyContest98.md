@@ -7,6 +7,7 @@ category: leetcode
 tags: leetcoe, weekly contest
 keywords: leetcode, weekly contest
 ---
+
 中间去休斯顿玩错过了一次，重新接上。这次比赛A了三道题目，前三道还算比较顺利，没遇到太大的问题，第四题不会做。<br>
 **888. Fair Candy Swap**
 <p>找到两个数组中的相差固定的两个数，时间复杂度应该是O(nlgn)。可以排序，然后二分查找。也可以用map。</p>
