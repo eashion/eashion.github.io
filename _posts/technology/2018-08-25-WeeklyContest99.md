@@ -14,7 +14,6 @@ keywords: leetcode, weekly contest
 class Solution {
 public:
     int surfaceArea(vector<vector<int>>& grid) {
-        // grid = {{1,2},{3,4}};
         int res = 0;
         int N = grid.size();
         if (N == 0) {
